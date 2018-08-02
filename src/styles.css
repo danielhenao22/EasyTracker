@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://use.fontawesome.com/releases/v5.1.0/css/all.css');
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  background-color: #fff;
+}
+
+.flex-center-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-center-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mat-chip-list-wrapper {
+  width: 100% !important;
+  flex-direction: row;
+  justify-content: space-between;
+  margin:0px !important;
+}
+
+.custom-modalbox .mat-dialog-container {
+  padding: 0px !important;
+}

@@ -1,0 +1,49 @@
+.main {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.form {
+  background-color: #ECEEEF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: col;
+  flex-wrap: wrap;
+  padding: 10px;
+  width: 40%;
+  max-width: 400px;
+  min-height: 100vh;
+  border-radius: 3%;
+}
+
+.input {
+  width: 70%;
+}
+mat-form-field{
+  width:80% !important;
+}
+
+h1 {
+  padding-bottom: 25px;
+}
+
+.buttoms {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 70%;
+}
+
+.login-button {
+  width: 40%;
+}
+
+.login-button :hover {
+  background: #0d7377 !important;
+}

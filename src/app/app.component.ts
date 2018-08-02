@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  public localStorageItem(id: string): any {
+    return localStorage.getItem(id);
+  }
 }

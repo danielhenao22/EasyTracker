@@ -1,0 +1,33 @@
+<div class="main">
+
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="form">
+
+    <h1>Acceso a usuarios</h1>
+
+    <mat-form-field appearance="outline" class="input">
+      <mat-label>Usuario</mat-label>
+      <input type="text" matInput name="name" [(ngModel)]="user.user" formControlName="username" [errorStateMatcher]="matcher">
+      <mat-error *ngIf="loginForm.controls.username.hasError('required')">
+        Por favor, ingrese un nombre de usuario.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="input">
+      <mat-label>Contraseña</mat-label>
+      <input matInput type="password" name="password" [(ngModel)]="user.password" formControlName="password" [errorStateMatcher]="matcher">
+      <mat-hint>
+        <a href="#">¿Olvido su contraseña?</a>
+      </mat-hint>
+      <mat-error *ngIf="loginForm.controls.password.hasError('required')">
+          Por favor, ingrese una contraseña.
+      </mat-error>
+    </mat-form-field>
+
+    <div class="buttoms">
+      <button mat-raised-button class="login-button" type="submit" [disabled]="!loginForm.valid">Ingresar</button>
+      <button mat-raised-button class="login-button" (click)="onRegister();">Registrarse</button>
+    </div>
+
+  </form>
+
+</div>

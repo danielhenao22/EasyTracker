@@ -1,0 +1,38 @@
+.general {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 5%;
+  background-color: #f8f8f8;
+}
+
+header{
+  margin: 1%;
+}
+
+h1{
+  color: #42a834;  
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  min-height: 45vh;
+  width: 80%;
+  background-color: #ECEEEF;
+  justify-content: space-around;
+  border-radius: 2px;
+  margin: 1%;
+  align-items: center;
+}
+
+agm-map {
+  height: 300px;
+  width: 90%;
+}
+
+p{
+  width: 100%;
+  margin: 2%;
+}

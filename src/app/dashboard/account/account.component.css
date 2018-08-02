@@ -1,0 +1,43 @@
+.general {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.information {
+  width: 48%;
+  background-color: #ECEEEF;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  margin: 1vh;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 1vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+h3 {
+  margin-right: 5px;
+  color: #42a834;
+}
+
+h2 {
+  color: #497e42;
+  margin: 0.5vh;
+}

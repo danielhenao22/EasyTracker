@@ -1,0 +1,30 @@
+<div class="general">
+  <div class="information">
+    <h2>Ordenes</h2>
+    <mat-divider></mat-divider>
+    <div class="content">
+      <div class="col">
+        <label><h3>Pendientes: </h3> {{userOrdersInformation.pending}}</label>
+        <label><h3>En camino: </h3> {{userOrdersInformation.transit}}</label>
+      </div>
+      <div class="col">
+        <label><h3>Total: </h3> {{userOrdersInformation.total}}</label>
+        <label><h3>Terminadas: </h3> {{userOrdersInformation.closed}}</label>
+      </div>
+    </div>
+  </div>
+  <div class="information">
+      <h2>Mi cuenta</h2>
+      <mat-divider></mat-divider>
+      <div class="content">
+        <div class="col">
+          <label><h3>Usuario: </h3>{{userLogged.firstname}} {{userLogged.lastname}}</label>
+          <label><h3>Correo: </h3>{{userLogged.email}}</label>
+        </div>
+        <div class="col">
+          <label><h3>Suscripcion: </h3> Gratuita </label>
+          <label><h3>Actualizado: </h3> {{date | date:'medium'}}</label>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,101 @@
+<div class="general">
+  <div class="header">
+    Detalles orden - {{data.order.tracking_Number}}
+  </div>
+  <mat-divider class="divider"></mat-divider>
+  <div class="body">
+    <mat-tab-group>
+      <mat-tab label="Detalles">
+        <div class="tab1">
+          <div class="colum">
+            <label>
+              <h3>Estado:</h3>
+              {{status ? status :'no disponible'}}
+            </label>
+            <mat-divider></mat-divider>
+            <label>
+              <h3>Origen:</h3>
+              {{origin ? origin :'no disponible'}}
+            </label>
+            <mat-divider></mat-divider>
+            <label>
+              <h3>Destino:</h3>
+              {{destination ? destination :'no disponible'}}
+            </label>
+            <mat-divider></mat-divider>
+            <label>
+              <h3>Direccion:</h3>
+              {{data.order.address}}
+            </label>
+            <mat-divider></mat-divider>
+            <label>
+              <h3>Nombre:</h3>
+              {{data.order.name}}
+            </label>
+            <mat-divider></mat-divider>
+            <label>
+              <h3>Comentario:</h3>
+              {{data.order.comment}}
+            </label>
+            <mat-divider></mat-divider>
+            <label>
+              <h3>Compañia:</h3>
+              {{company ? company :'no disponible'}}
+            </label>
+            <label>
+              <h3>Peso:</h3>
+              {{order.order.weight}}
+            </label>
+            <mat-divider></mat-divider>
+            <mat-divider></mat-divider>
+          </div>
+          <div class="colum">
+            <label>
+              <h3>Iniciado:</h3>
+              <mat-form-field>
+                <input matInput [matDatepicker]="dpInitiated" [formControl]="initiated" disabled>
+                <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
+                <mat-datepicker #dp1></mat-datepicker>
+              </mat-form-field>
+            </label>
+            <label>
+              <h3>Despachado:</h3>
+              <mat-form-field>
+                <input matInput [matDatepicker]="dpDispached" [formControl]="dispached" disabled>
+                <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
+                <mat-datepicker #dp1></mat-datepicker>
+              </mat-form-field>
+            </label>
+            <label>
+              <h3>Aduana:</h3>
+              <mat-form-field>
+                <input matInput [matDatepicker]="dpCustoms" [formControl]="customs" disabled>
+                <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
+                <mat-datepicker #dp1></mat-datepicker>
+              </mat-form-field>
+            </label>
+            <label>
+              <h3>Entregado:</h3>
+              <mat-form-field>
+                <input matInput [matDatepicker]="dpDelivered" [formControl]="delivered" disabled>
+                <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
+                <mat-datepicker #dp1></mat-datepicker>
+              </mat-form-field>
+            </label>
+            <label>
+              <h3>Cerrado:</h3>
+              <mat-form-field>
+                <input matInput [matDatepicker]="dpClosed" [formControl]="closed" disabled>
+                <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
+                <mat-datepicker #dp1></mat-datepicker>
+              </mat-form-field>
+            </label>
+          </div>
+        </div>
+
+      </mat-tab>
+      <mat-tab label="Historial"> Historial de la orden </mat-tab>
+      <div class="tab2"></div>
+    </mat-tab-group>
+  </div>
+</div>

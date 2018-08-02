@@ -1,0 +1,22 @@
+.general{
+  width: 100%;
+}
+
+.account{
+  width: 90%;
+}
+
+.cardsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  min-height: 50vh;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cards {
+  width: 32%;
+  margin: 5px;
+}

@@ -1,0 +1,46 @@
+.main{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.form{    
+    background: #ECEEEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
+    height: 55vh;
+    min-height: 45vh;
+    border-radius: 3%;
+}
+
+.input{
+    width: 70%;
+}
+
+h1{
+    padding-bottom: 25px;
+}
+
+.buttoms{
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 70%;
+    
+}
+
+.login-button{
+    width: 40%;
+}
+
+.login-button :hover{
+    background: #0d7377 !important;
+}
+

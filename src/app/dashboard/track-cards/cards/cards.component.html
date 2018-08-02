@@ -1,0 +1,24 @@
+<div class="flex-center-col card">
+  <div class="flex-center-row header">
+    <div class="left-tag">
+      <h3>
+        {{order.tracking_Number}}
+      </h3>
+    </div>
+    <h3>
+      {{status ? status :'no disponible'}}
+    </h3>
+  </div>
+  <h2>{{order.name}}</h2>
+  <label>{{company ? company :'no disponible'}}</label>
+  <mat-divider></mat-divider>
+  <div class="tags-container">
+  </div>
+    <mat-chip-list class="locations">
+      <mat-chip color="primary" selected>{{origin ? origin :'no disponible'}}</mat-chip>
+      <mat-chip selected>Recibido en bodega AXM</mat-chip>
+      <mat-chip color="primary" selected>{{destination ? destination :'no disponible'}}</mat-chip>
+    </mat-chip-list>
+  <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+  <button mat-raised-button class="button" color="primary" (click)="openDialog()">Ver más</button>
+</div>

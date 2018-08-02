@@ -1,0 +1,70 @@
+<div class="main">
+
+  <form [formGroup]="loginForm" (ngSubmit)="onRegister()" class="form">
+
+    <h1>Registro de usuarios</h1>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre</mat-label>
+      <input type="text" matInput name="firstname" [(ngModel)]="user.firstname" formControlName="firstname" [errorStateMatcher]="matcher">
+      <mat-error *ngIf="loginForm.controls.firstname.hasError('required')">
+        Por favor, ingrese un nombre.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Apellido</mat-label>
+      <input type="text" matInput name="lastname" [(ngModel)]="user.lastname" formControlName="lastname" [errorStateMatcher]="matcher">
+      <mat-error *ngIf="loginForm.controls.lastname.hasError('required')">
+        Por favor, ingrese un apellido.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Numero de Celular</mat-label>
+      <input type="text" matInput name="cellphone" [(ngModel)]="user.cellphone" formControlName="cellphone" [errorStateMatcher]="matcher">
+      <mat-error *ngIf="loginForm.controls.cellphone.hasError('required')">
+        Por favor, ingrese un numero de celular.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Correo electronico</mat-label>
+      <input type="text" matInput name="email" [(ngModel)]="user.email" formControlName="email" [errorStateMatcher]="matcher">
+      <mat-error *ngIf="loginForm.controls.email.hasError('required')">
+        Por favor, ingrese un email.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre de usuario</mat-label>
+      <input type="text" matInput name="user" [(ngModel)]="user.user" formControlName="user" [errorStateMatcher]="matcher">
+      <mat-error *ngIf="loginForm.controls.user.hasError('required')">
+        Por favor, ingrese un usuario.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Contraseña</mat-label>
+      <input matInput type="password" name="password" [(ngModel)]="user.password" formControlName="password" [errorStateMatcher]="matcher">
+      <mat-error *ngIf="loginForm.controls.password.hasError('required')">
+        Por favor, ingrese una contraseña.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Repetir contraseña</mat-label>
+      <input matInput type="password" name="password" [(ngModel)]="user.password" formControlName="password" [errorStateMatcher]="matcher">
+      <mat-error *ngIf="loginForm.controls.password.hasError('required')">
+        Por favor, repita la contraseña.
+      </mat-error>
+    </mat-form-field>
+
+    <div class="buttoms">
+      <button mat-raised-button class="login-button" (click)="onBack();">Atras</button>
+      <button mat-raised-button class="login-button" type="submit" [disabled]="!loginForm.valid">Registrarse</button>
+    </div>
+
+  </form>
+
+</div>
